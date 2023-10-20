@@ -151,7 +151,6 @@ class TestAccountService(TestCase):
         data = resp.get_json()
         self.assertEqual(len(data), 5)
 
-
     def test_update_account(self):
         """It should Update an existing Account"""
         # create an Account to update
@@ -201,3 +200,4 @@ class TestAccountService(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         # Check for the CORS header
         self.assertEqual(response.headers.get('Access-Control-Allow-Origin'), '*')
+      
